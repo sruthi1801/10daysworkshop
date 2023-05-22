@@ -27,17 +27,18 @@ public class ProductController {
 ProductDb p;
 	
 	Product p1;
-	List<Product> li=new ArrayList<>();
+	@PostMapping("/save")
+	public String saveproduct(@RequestBody Product pro)
+	{
+		p.save(pro);
+		return "registered";
+	
 	
 @GetMapping("/get")
 
 
 public List<Product> getall(){
-	/*li=p.findAll();
-	for(Product p:li)
-	{
-		System.out.println(p.getName());
-	}*/
+	
 	return p.findAll();
 	
 }
