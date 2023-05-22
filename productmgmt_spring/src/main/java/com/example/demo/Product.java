@@ -16,11 +16,18 @@ import jakarta.persistence.Table;
 public class Product {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int id;
 	private String name;
 	private String type;
 	private String place;
 	private int warranty;
-public String getName() {
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
@@ -44,20 +51,24 @@ public String getName() {
 	public void setWarranty(int warranty) {
 		this.warranty = warranty;
 	}
-	public Product(String name, String type, String place, int warranty) {
+	public Product(int id, String name, String type, String place, int warranty) {
 		super();
+		this.id = id;
 		this.name = name;
 		this.type = type;
 		this.place = place;
 		this.warranty = warranty;
 	}
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", name=" + name + ", type=" + type + ", place=" + place + ", warranty=" + warranty
+				+ "]";
+	}
 	public Product() {
 		super();
 	}
-	@Override
-	public String toString() {
-		return "Product [name=" + name + ", type=" + type + ", place=" + place + ", warranty=" + warranty + "]";
-	}
+	
+
 	
 	
 
