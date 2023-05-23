@@ -12,7 +12,7 @@ private baseURL1="http://localhost:8081/product/get";
 private baseURL2="http://localhost:8081/product/save";
 private baseURL3="http://localhost:8081/product/warranty";
   constructor(private httpClient: HttpClient) { }
-  getEmployeesList(): Observable<Products[]>{
+  getproductList(): Observable<Products[]>{
     return this.httpClient.get<Products[]>(`${this.baseURL1}`);
   }
   createProduct(product:Products) :Observable<object>{
