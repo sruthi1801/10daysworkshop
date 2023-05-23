@@ -1,0 +1,20 @@
+<h2>Find by place</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Name</th>
+            <th> Type</th>
+            <th> Place</th>
+            <th> Warranty</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let e of product" >
+            <td> {{ e.name }} </td>
+            <td> {{ e.type }} </td>
+            <td> {{ e.place}} </td>
+            <td>{{e.warranty}}</td>
+        </tr>
+      
+    </tbody>
+</table>

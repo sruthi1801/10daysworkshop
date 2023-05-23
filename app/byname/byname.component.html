@@ -1,0 +1,35 @@
+<h3> Find by name</h3>
+<!--<div>
+    <div>
+        <label> <b> Name: </b></label> {{product.name}}
+    </div>
+    <div>
+        <label> <b> Type: </b></label> {{product.type}}
+    </div>
+    <div>
+        <label> <b> Place: </b></label> {{product.place}}
+    </div>
+
+    <div>
+        <label> <b> Warranty: </b></label> {{product.warranty}}
+    </div>
+</div>-->
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Name</th>
+            <th> Type</th>
+            <th> Place</th>
+            <th> Warranty</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let e of product" >
+            <td> {{ e.name }} </td>
+            <td> {{ e.type }} </td>
+            <td> {{ e.place}} </td>
+            <td>{{e.warranty}}</td>
+        </tr>
+      
+    </tbody>
+</table>
