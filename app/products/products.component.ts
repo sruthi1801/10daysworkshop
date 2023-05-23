@@ -20,7 +20,7 @@ ngOnInit():void{
 private getAllProducts() {
     //throw new Error('Method not implemented.');
 
-    this.p.getEmployeesList().subscribe(data =>{
+    this.p.getproductList().subscribe(data =>{
       this.product=data;
       
     })
